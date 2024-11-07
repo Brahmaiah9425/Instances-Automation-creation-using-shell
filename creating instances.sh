@@ -6,7 +6,7 @@ SG_ID=sg-084393c1fa626268c
 
 instances=("mongodb" " cart"  "payments"  "radis"  "web"  "user"  "mysql"  "radditmq"  "catalogue"  "shipping")
 
-for i "${instances[@]}"
+for i in "${instances[@]}"
 do 
     if [$i == "mongodb"] | [$i == "web"] | [$i == "shipping"]
     then
