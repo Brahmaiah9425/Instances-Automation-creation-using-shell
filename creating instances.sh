@@ -4,11 +4,11 @@ AMI=ami-0b4f379183e5706b9
 
 SG_ID=sg-084393c1fa626268c
 
-instances=("mongodb" " cart"  "payments"  "radis"  "web"  "user"  "mysql"  "radditmq"  "catalogue"  "shipping")
+INSTANCES=("mongodb" "cart"  "payments"  "radis"  "web"  "user"  "mysql"  "radditmq"  "catalogue"  "shipping")
 
-for i in "${instances[@]}"
+for i in "${INSTANCES[@]}"
 do 
-    if [$i == "mongodb"] || [$i == "web"] || [$i == "shipping"]
+    if [ $i == "mongodb" ] || [ $i == "web" ] || [ $i == "shipping" ]
     then
         INSTANCE_TYPE="t3.small"
     else
