@@ -8,7 +8,7 @@ instances=("mongodb" " cart"  "payments"  "radis"  "web"  "user"  "mysql"  "radd
 
 for i in "${instances[@]}"
 do 
-    if [$i == "mongodb"] | [$i == "web"] | [$i == "shipping"]
+    if [$i == "mongodb"] || [$i == "web"] || [$i == "shipping"]
     then
         INSTANCE_TYPE="t3.small"
     else
